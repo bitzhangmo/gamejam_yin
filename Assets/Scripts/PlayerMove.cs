@@ -50,7 +50,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            p_transform.Translate(Vector3.left * 10.0f * Time.deltaTime);
+            p_transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
             //rigidbody.AddForce(new Vector3(-moveSpeed,0,0));
             Debug.Log("A");
         }
@@ -62,7 +62,7 @@ public class PlayerMove : MonoBehaviour
 		}*/
         else if (Input.GetKey(KeyCode.D))
         {
-            p_transform.Translate(Vector3.right * 10.0f * Time.deltaTime);
+            p_transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
             //rigidbody.AddForce(new Vector3(moveSpeed,0,0));
             Debug.Log("D");
         }
