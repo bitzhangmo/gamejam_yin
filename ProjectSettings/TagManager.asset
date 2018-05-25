@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Ground
   - Light
+  - Destroy
+  - GameManager
   layers:
   - Default
   - TransparentFX

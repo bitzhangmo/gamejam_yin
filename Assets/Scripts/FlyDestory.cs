@@ -21,6 +21,7 @@ public class FlyDestory : MonoBehaviour
         else if (collision.gameObject.tag == "Destroy")
         {
             GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
+            Debug.Log("Destroy!");
             Destroy(gameObject);
         }
     }

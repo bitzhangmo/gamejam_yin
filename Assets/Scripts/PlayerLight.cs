@@ -46,7 +46,7 @@ public class PlayerLight : MonoBehaviour
     {
         GameObject point;
         isShooting = true;
-        this.gameObject.GetComponent<PlayerMove>().isShooting = true;
+        gameObject.GetComponent<PlayerMove>().isShooting = true;
         for (int i = 0; i < lightNum; i++)
         {
             point = GameObject.Instantiate(light_Fly, lightShootPoint.position + Vector3.Normalize(targetDirection) * offset, transform.rotation);
@@ -55,6 +55,7 @@ public class PlayerLight : MonoBehaviour
             yield return new WaitForSeconds(initWaitTime);
         }
         this.gameObject.GetComponent<PlayerMove>().isShooting = false;
+        isShooting = false;
         //circleTrigger.enabled = true;
     }
 
