@@ -5,6 +5,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int existLightFly = 0;
+    public PlayerLight pLightNum;
+    public PlayerMove pMove;
+
+    private void Update()
+    {
+        if ((existLightFly + pLightNum.LightNum) <= 0)
+        {
+            pMove.isDead = true;
+        }
+    }
 
     public void AddLightFly()
     {

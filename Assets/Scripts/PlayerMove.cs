@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LOS;
 
 public class PlayerMove : MonoBehaviour
 {
-
     [HideInInspector]
     private Transform p_transform;
     private Rigidbody2D p_rigidbody;
@@ -14,7 +14,10 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed = 5.0f;
     public bool isGrounded = true;
     public bool isShooting = false;
+    public bool isDead = false;
     public Vector3 velocity;
+    public LOSRadialLight LRLight;
+
     void Awake()
     {
         p_transform = GetComponent<Transform>();
@@ -28,8 +31,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isShooting)
+        if (!isShooting && !isDead)
             Move();
+        else if (isDead)
+        {
+            LRLight.color = new Color(LRLight.color.r, LRLight.color.g, LRLight.color.b, 0);
+        }
     }
 
     void Move()
