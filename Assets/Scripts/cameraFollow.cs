@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraFollow : MonoBehaviour {
+public class CameraFollow : MonoBehaviour {
 	public Transform player;
 	public Vector3 Margin;
 	public Vector3 smoothing;
@@ -20,7 +20,6 @@ public class cameraFollow : MonoBehaviour {
 	void Start()
 	{
 		isFollowing=true;
-		//isSmoothFollow=true;
 	}
 
 	protected void Update()
