@@ -1,32 +1,43 @@
-﻿// Copyright (C) 2018 武汉艺画开天文化传播有限公司 版权所有
-// 创建标识: zhangMo
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLight : MonoBehaviour {
-
-	public Transform player;
+public class PlayerLight : MonoBehaviour
+{
+    [SerializeField]
+    private float LightLength;
+    [SerializeField]
+    private float initWaitTime;
+    [SerializeField]
+    private float speed;
 	private Vector3 clickPosition;
+    private int lightNum;
 	public Vector3 targetDirection;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		createLight();
+    public GameObject lightPoint;
+    public Transform player;
+    public Transform lightShootPoint;
+
+	private void Update ()
+    {
+		CreateLight();
 	}
 
-	public void createLight()
+	private void CreateLight()
 	{
-		if(Input.GetMouseButtonUp(0))
+		if (Input.GetMouseButtonUp(0))
 		{
-			clickPosition=Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			//print(clickPosition);
+            lightNum -= 1;
+			clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			targetDirection=new Vector3(clickPosition.x-player.transform.position.x,clickPosition.y-player.transform.position.y,player.transform.position.z);
-			print(targetDirection);
+            Debug.Log("Shoot");
+            CreateLightWay();
 		}
 	}
+
+    private void CreateLightWay()
+    {
+        GameObject point;
+        point = GameObject.Instantiate(lightPoint, lightShootPoint.position, transform.rotation);
+        point.GetComponent<Rigidbody2D>().AddForce(targetDirection * speed);
+    }
 }
