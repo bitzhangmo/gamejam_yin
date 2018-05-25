@@ -34,6 +34,7 @@ public class PlayerMove : MonoBehaviour {
 		{
 			//transform.Translate(Vector3.up*30.0f*Time.deltaTime);
 			p_rigidbody.AddForce(new Vector3(0,jumpHeight,0));
+			isGrounded=false;
 			Debug.Log("W");
 		}
 		else if(Input.GetKey(KeyCode.A))
@@ -55,4 +56,18 @@ public class PlayerMove : MonoBehaviour {
 			Debug.Log("D");
 		}
 	}
+
+	/// <summary>
+	/// Sent when an incoming collider makes contact with this object's
+	/// collider (2D physics only).
+	/// </summary>
+	/// <param name="other">The Collision2D data associated with this collision.</param>
+	void OnCollisionEnter2D(Collision2D other)
+	{
+				if(other.gameObject.tag=="Ground")
+		{
+			isGrounded=true;
+		}
+	}
+
 }

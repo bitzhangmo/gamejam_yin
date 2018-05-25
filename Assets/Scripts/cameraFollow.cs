@@ -11,8 +11,8 @@ public class cameraFollow : MonoBehaviour {
 
 	public float xOffset;
 	public float yOffset;
-	private Vector3 _min;
-	private Vector3 _max;
+	//private Vector3 _min;
+	//private Vector3 _max;
 
 	[SerializeField] protected float followSpeed;
 	public bool isFollowing{get;set;}
