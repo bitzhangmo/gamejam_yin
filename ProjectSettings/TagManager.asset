@@ -10,6 +10,7 @@ TagManager:
   - Destroy
   - GameManager
   - PreLight
+  - Reflect
   layers:
   - Default
   - TransparentFX
