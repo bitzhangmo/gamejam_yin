@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23430177869627830}
   - component: {fileID: 50069692367494922}
   - component: {fileID: 58024738693256154}
+  - component: {fileID: 114699555331879212}
   m_Layer: 0
   m_Name: Light_Fly
   m_TagString: Light
@@ -146,3 +147,15 @@ MonoBehaviour:
   radius: 1
   flashFrequency: 20
   flashOffset: 0.2
+--- !u!114 &114699555331879212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466306184448160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e126ada8d8ea5547bdfef61fceb2d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceTime: 2
