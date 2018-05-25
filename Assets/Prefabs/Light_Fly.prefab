@@ -25,8 +25,8 @@ GameObject:
   - component: {fileID: 50069692367494922}
   - component: {fileID: 58024738693256154}
   m_Layer: 0
-  m_Name: Light
-  m_TagString: Untagged
+  m_Name: Light_Fly
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

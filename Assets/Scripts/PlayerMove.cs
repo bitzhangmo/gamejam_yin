@@ -9,11 +9,11 @@ public class PlayerMove : MonoBehaviour
     [HideInInspector]
     private Transform p_transform;
     private Rigidbody2D p_rigidbody;
-
+    public int lightCount = 5;
     public float jumpHeight = 20f;
     public float moveSpeed = 5.0f;
     public bool isGrounded = true;
-
+    public bool isShooting = false;
     public Vector3 velocity;
     void Awake()
     {
@@ -28,7 +28,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!isShooting)
+            Move();
     }
 
     void Move()
