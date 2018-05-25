@@ -217,7 +217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.26030046, y: 0.26030046}
   m_EdgeRadius: 0
 --- !u!114 &114116913439779522
 MonoBehaviour:
@@ -303,8 +303,13 @@ MonoBehaviour:
   speed: 25
   lightNum: 3
   offset: 2
+  preSpeed: 50
+  checkOffset: 0.5
+  destroyTime: 10
   targetDirection: {x: 0, y: 0, z: 0}
   light_Fly: {fileID: 1466306184448160, guid: df5c4a9220f45a34fbcebf51802cf61d, type: 2}
+  pre_light_Fly: {fileID: 1281860152773520, guid: 4d51afa07ce31e448b0b256152360399,
+    type: 2}
   player: {fileID: 4405804751795382}
   lightShootPoint: {fileID: 4405804751795382}
   GM: {fileID: 0}
@@ -347,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightCount: 5
   jumpHeight: 15
-  moveSpeed: 0.1
+  moveSpeed: 5
   isGrounded: 1
   isShooting: 0
   isDead: 0
