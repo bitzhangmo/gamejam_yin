@@ -9,6 +9,7 @@ TagManager:
   - Light
   - Destroy
   - GameManager
+  - PreLight
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - 
   - 
   - Obstacle
-  - 
-  - 
-  - 
+  - Light
+  - Reflect
+  - Floor
   - 
   - 
   - 

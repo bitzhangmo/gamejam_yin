@@ -15,12 +15,14 @@ public class FlyDestory : MonoBehaviour
             if (bounceTime <= 0)
             {
                 GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
+                Debug.Log("2");
                 Destroy(gameObject);
             }
         }
-        else if (collision.gameObject.tag == "Destroy")
+        else if (collision.gameObject.tag == "Destroy" && gameObject.tag == "PreLight")
         {
             GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
+            Debug.Log("3");
             Debug.Log("Destroy!");
             Destroy(gameObject);
         }
