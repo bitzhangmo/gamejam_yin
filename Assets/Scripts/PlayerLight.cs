@@ -47,7 +47,7 @@ public class PlayerLight : MonoBehaviour
         GameObject point;
         isShooting = true;
         gameObject.GetComponent<PlayerMove>().isShooting = true;
-        for (int i = 0; i < lightNum; i++)
+        for (;lightNum > 0; lightNum--)
         {
             point = GameObject.Instantiate(light_Fly, lightShootPoint.position + Vector3.Normalize(targetDirection) * offset, transform.rotation);
             point.GetComponent<Rigidbody2D>().AddForce(targetDirection * speed);
@@ -66,6 +66,14 @@ public class PlayerLight : MonoBehaviour
             lightNum++;
             GM.SendMessage("SubLightFly");
             Destroy(collision.gameObject);
+        }
+    }
+
+    public int LightNum
+    {
+        get
+        {
+            return lightNum;
         }
     }
 }
