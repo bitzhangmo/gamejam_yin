@@ -6,7 +6,7 @@ using UnityEngine;
 public class Brighten : MonoBehaviour {
 
 	private SpriteRenderer render;
-
+	public MoveInDirection toMove;
 	private void Awake() {
 		render=GetComponent<SpriteRenderer>();
 	}
@@ -15,6 +15,7 @@ public class Brighten : MonoBehaviour {
 		if(other.gameObject.tag=="Player"||other.gameObject.tag=="Light")
 		{
 			render.color=Color.white;
+			toMove.isToMove=true;
 		}
 	}
 
