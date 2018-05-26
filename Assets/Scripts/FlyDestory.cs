@@ -11,15 +11,9 @@ public class FlyDestory : MonoBehaviour
     {
         if (collision.gameObject.tag != "Reflect")
         {
-            if (gameObject.tag != "PreLight")
-            {
-                GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
-                Destroy(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
+            Debug.Log("SubLightFly");
+            Destroy(gameObject);
         }
     }
 }
