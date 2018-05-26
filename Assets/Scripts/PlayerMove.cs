@@ -60,18 +60,10 @@ public class PlayerMove : MonoBehaviour
             p_transform.Translate(Vector3.left * moveSpeed * Time.deltaTime /*+ new Vector3(0, randomUp, 0)*/);
             if (sr.sprite != moveL)
             {
-               // anim.SetFloat("turn", -1);
                 sr.sprite = moveL;
             }
-            //rigidbody.AddForce(new Vector3(-moveSpeed,0,0));
             Debug.Log("A");
         }
-        /*else if(Input.GetKeyDown(KeyCode.S))
-		{
-			//transform.Translate(Vector3.down*10.0f*Time.deltaTime);
-			//rigidbody.AddForce(new Vector3(0,-10,0));
-			Debug.Log("S");
-		}*/
         else if (Input.GetKey(KeyCode.D))
         {
             p_transform.Translate(Vector3.right * moveSpeed * Time.deltaTime /*+ new Vector3(0, randomUp, 0)*/);
@@ -80,8 +72,6 @@ public class PlayerMove : MonoBehaviour
                 //anim.SetFloat("turn", -1);
                 sr.sprite = moveR;
             }
-
-            //rigidbody.AddForce(new Vector3(moveSpeed,0,0));
             Debug.Log("D");
         }
         else
