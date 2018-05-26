@@ -53,6 +53,7 @@ public class ThroughMouse : MonoBehaviour {
 		if(other.gameObject.tag=="Ground")
 		{
 			Destroy(gameObject.GetComponent<Rigidbody2D>());
+			//Destroy(gameObject.GetComponent<CapsuleCollider2D>());
 			Destroy(gameObject.GetComponent<ThroughMouse>());
 		}
 	}
