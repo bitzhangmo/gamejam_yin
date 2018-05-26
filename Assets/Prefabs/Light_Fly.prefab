@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50069692367494922}
   - component: {fileID: 58024738693256154}
   - component: {fileID: 114699555331879212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light_Fly
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1466306184448160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.116, y: 1.076, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -158,4 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e126ada8d8ea5547bdfef61fceb2d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceTime: 2
+  bounceTime: 100
