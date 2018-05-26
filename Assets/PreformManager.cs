@@ -11,7 +11,7 @@ public class PreformManager : MonoBehaviour {
 			{
 				platforms[0].getUp();
 				platforms[1].getUp();
-				StartCoroutine(waitForASeconds());
+				//StartCoroutine(waitForASeconds());
 				if(platforms[0].isReadyToDown&&platforms[1].isReadyToDown)
 				{
 					platforms[0].getDown();
