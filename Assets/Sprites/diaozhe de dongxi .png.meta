@@ -121,10 +121,10 @@ TextureImporter:
       name: diaozhe de dongxi _0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 58
-        width: 109
-        height: 99
+        x: 77
+        y: 57
+        width: 117
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,6 @@ TextureImporter:
         y: 31
         width: 9
         height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: diaozhe de dongxi _6
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 157
-        width: 6
-        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
