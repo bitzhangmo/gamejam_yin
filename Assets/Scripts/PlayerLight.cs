@@ -62,7 +62,7 @@ public class PlayerLight : MonoBehaviour
         {
             Debug.Log("Down");
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(Vector3.Magnitude(mousePosition - lastMousePosition));
+            //Debug.Log(Vector3.Magnitude(mousePosition - lastMousePosition));
             if (Vector3.Magnitude(mousePosition - lastMousePosition) <= checkOffset)
             {
                 checkTime += Time.deltaTime;
