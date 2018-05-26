@@ -37,10 +37,10 @@ public class ThroughMouse : MonoBehaviour {
 			else
 				rigidbody.AddForce(new Vector2(-0.5f,0));
 		}
-		if(Input.GetMouseButtonDown(1))
+		/*if(Input.GetMouseButtonDown(1))
 		{
 			Destroy(this.GetComponent<DistanceJoint2D>());
-		}
+		}*/
 	}
 
 	/// <summary>
@@ -48,12 +48,12 @@ public class ThroughMouse : MonoBehaviour {
 	/// collider (2D physics only).
 	/// </summary>
 	/// <param name="other">The Collision2D data associated with this collision.</param>
-	void OnCollisionEnter2D(Collision2D other)
+	/*void OnCollisionEnter2D(Collision2D other)
 	{
 		if(other.gameObject.tag=="Ground")
 		{
 			Destroy(gameObject.GetComponent<Rigidbody2D>());
 			Destroy(gameObject.GetComponent<ThroughMouse>());
 		}
-	}
+	}*/
 }
