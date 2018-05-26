@@ -8,7 +8,8 @@ public class Brighten : MonoBehaviour {
 	private SpriteRenderer render;
 	public MoveInDirection toMove;
     public GameObject fire;
-    public Transform firePoint;
+    public GameObject nextLevel;
+
 	private void Awake()
     {
 		render=GetComponent<SpriteRenderer>();
@@ -18,10 +19,17 @@ public class Brighten : MonoBehaviour {
     {
 		if(other.gameObject.tag=="Player"||other.gameObject.tag=="Light")
 		{
-			render.color=Color.white;
-			toMove.isToMove=true;
+            if (toMove != null)
+            {
+                toMove.isToMove = true;
+            }
+            if (nextLevel != null)
+            {
+                nextLevel.SetActive(true);
+            }
+            render.color = Color.white;
             Debug.Log("Fire");
-            Instantiate(fire, firePoint.position, firePoint.rotation);
+            fire.SetActive(true);
         }
 	}
 
