@@ -65,9 +65,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107599092424446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51, y: -0.89, z: -0.012278956}
-  m_LocalScale: {x: 3.7902832, y: 0.30054128, z: 0.96414226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.92, y: -2.44, z: -0.012278959}
+  m_LocalScale: {x: 2.3689299, y: 0.26297, z: 0.96414}
   m_Children:
   - {fileID: 4235921254563300}
   m_Father: {fileID: 0}
@@ -162,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2f2872378660b419951ec7fbbeeee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 3
   destroyRender: {fileID: 23520624468106248}
   material: {fileID: 2100000, guid: bdc799abd463fc94a90703d4f60f8ca7, type: 2}
   father: {fileID: 1107599092424446}
-  burnSpeed: 0.3
+  burnSpeed: 0.13

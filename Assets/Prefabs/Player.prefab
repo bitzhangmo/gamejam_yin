@@ -77,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1345728315086556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.65, y: 0.24, z: 0}
+  m_LocalPosition: {x: -7.14, y: -2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4763059636111278}
@@ -193,7 +193,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.2367912
 --- !u!61 &61553140434576062
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -299,10 +299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a03b9a62e06a454c8ca959885712db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initWaitTime: 1
+  initWaitTime: 0.2
   speed: 25
   lightNum: 3
-  offset: 2
+  offset: 4
   preSpeed: 50
   checkOffset: 0.5
   destroyTime: 10
@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightCount: 5
-  jumpHeight: 15
-  moveSpeed: 5
+  jumpHeight: 20
+  moveSpeed: 3
   isGrounded: 1
   isShooting: 0
   isDead: 0
