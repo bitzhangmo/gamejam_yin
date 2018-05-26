@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LOS;
 
 public class PlayerLight : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class PlayerLight : MonoBehaviour
     [SerializeField]
     private float destroyTime = 10f;
     private float checkTime = 0;
-	private Vector3 clickPosition;
+    private float lightA;
+    private Vector3 clickPosition;
     private Vector3 mousePosition;
     private Vector3 lastMousePosition;
     private GameObject pre;
@@ -32,11 +34,13 @@ public class PlayerLight : MonoBehaviour
     public Transform player;
     public Transform lightShootPoint;
     public GameManager GM;
+    public LOSRadialLight lightLOS;
 
     private void Start()
     {
         isShooting = false;
         lastMousePosition = Vector3.zero;
+        lightA = lightLOS.color.a;
     }
 
     private void Update ()
@@ -104,6 +108,7 @@ public class PlayerLight : MonoBehaviour
         {
             point = GameObject.Instantiate(light_Fly, lightShootPoint.position + Vector3.Normalize(targetDirection) * offset, transform.rotation);
             point.GetComponent<Rigidbody2D>().AddForce(targetDirection * speed);
+            lightLOS.color = new Color(lightLOS.color.r, lightLOS.color.g, lightLOS.color.b, lightLOS.color.a - lightA / lightNum);
             GM.SendMessage("AddLightFly");
             yield return new WaitForSeconds(initWaitTime);
         }
@@ -118,7 +123,8 @@ public class PlayerLight : MonoBehaviour
         {
             lightNum++;
             GM.SendMessage("SubLightFly");
-            Debug.Log("1");
+            lightLOS.color = new Color(lightLOS.color.r, lightLOS.color.g, lightLOS.color.b, lightLOS.color.a + lightA / lightNum);
+            //Debug.Log("1");
             Destroy(collision.gameObject);
         }
     }

@@ -9,6 +9,7 @@ public class Brighten : MonoBehaviour {
 	public MoveInDirection toMove;
     public GameObject fire;
     public GameObject[] nextLevel;
+    public GameObject[] smallObject;
 
 	private void Awake()
     {
@@ -19,6 +20,10 @@ public class Brighten : MonoBehaviour {
     {
 		if(other.gameObject.tag=="Player"||other.gameObject.tag=="Light")
 		{
+            if (other.gameObject.tag == " Light")
+            {
+                Destroy(other.gameObject);
+            }
             if (toMove != null)
             {
                 toMove.isToMove = true;
@@ -30,9 +35,19 @@ public class Brighten : MonoBehaviour {
                     nextLevel[i].GetComponent<ChangeObject>().isStart = true;
                 }
             }
+            if (smallObject != null)
+            {
+                for (int i = 0; i < smallObject.Length; i++)
+                {
+                    //smallObject[i].GetComponent<ChangeObject>().isSmaller = true;
+                    //Destroy(smallObject[i]);
+                    smallObject[i].SetActive(false);
+                }
+            }
             render.color = Color.white;
             Debug.Log("Fire");
             fire.SetActive(true);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
 	}
 

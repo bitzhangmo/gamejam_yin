@@ -45,7 +45,7 @@ public class BreakBlock : MonoBehaviour {
             material.SetFloat("_BurnAmount", burnAmount);
             yield return new WaitForSeconds(burnSpeed);
         }
-        Destroy(father);
+        father.SetActive(false);
     }
 
 }

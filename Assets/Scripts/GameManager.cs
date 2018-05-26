@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(existLightFly + pLightNum.LightNum);
         if ((existLightFly + pLightNum.LightNum) <= 0)
         {
             pMove.isDead = true;

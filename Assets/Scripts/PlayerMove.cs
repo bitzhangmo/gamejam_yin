@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     private Transform p_transform;
     [SerializeField]
     private float offset;
+    [SerializeField]
+    private float disapearSpeed;
     private Rigidbody2D p_rigidbody;
     public SpriteRenderer sr;
     public int lightCount = 5;
@@ -19,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     public bool isShooting = false;
     public bool isDead = false;
     public Vector3 velocity;
-    public LOSRadialLight LRLight;
+    public GameObject LRLight;
     public Animator anim;
     public Sprite moveR;
     public Sprite moveL;
@@ -41,7 +43,9 @@ public class PlayerMove : MonoBehaviour
             Move();
         else if (isDead)
         {
-            LRLight.color = new Color(LRLight.color.r, LRLight.color.g, LRLight.color.b, 0);
+            LRLight.SetActive(false);
+            anim.enabled = false;
+            PlayerDead();
         }
     }
 
@@ -57,19 +61,20 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            p_transform.Translate(Vector3.left * moveSpeed * Time.deltaTime /*+ new Vector3(0, randomUp, 0)*/);
+            p_transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
             if (sr.sprite != moveL)
             {
+                //anim.SetFloat("turn", -1);
                 sr.sprite = moveL;
             }
             Debug.Log("A");
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            p_transform.Translate(Vector3.right * moveSpeed * Time.deltaTime /*+ new Vector3(0, randomUp, 0)*/);
+            p_transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
             if (sr.sprite != moveR)
             {
-                //anim.SetFloat("turn", -1);
+                //anim.SetFloat("turn", 1);
                 sr.sprite = moveR;
             }
             Debug.Log("D");
@@ -91,6 +96,11 @@ public class PlayerMove : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+
+    private void PlayerDead()
+    {
+        sr.color = Color.Lerp(sr.color, Color.clear, Time.deltaTime * disapearSpeed);
     }
 
 }

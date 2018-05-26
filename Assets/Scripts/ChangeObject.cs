@@ -12,9 +12,13 @@ public class ChangeObject : MonoBehaviour
     private float changeSpeed;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private float smallSpeed;
     private Vector3 originalPosition;
     private static Vector3 bigScale = new Vector3(1, 1, 1);
-    private static Vector3 smallScale = new Vector3(0.5f, 0.5f, 0.5f);
+    private static Vector3 smallScale = new Vector3(0.1f, 0.1f, 0.1f);
+    public BoxCollider2D[] box_2D;
+    public BoxCollider[] box;
     public Transform targetPosition;
     public bool isBigger = false;
     public bool isSmaller = false;
@@ -43,22 +47,8 @@ public class ChangeObject : MonoBehaviour
     {
         if (isStart)
         {
-            if (isShaking)
-            {
-                StartCoroutine(ShakeObject());
-            }
-            if (isBigger)
-            {
-                BeBigger();
-            }
-            if (isSmaller)
-            {
-                BeSmaller();
-            }
-            if (isFalling)
-            {
-                FallingDown();
-            }
+            StartCollider();
+            StartCoroutine(ObjectMove());
         }
     }
     
@@ -85,6 +75,15 @@ public class ChangeObject : MonoBehaviour
         }
     }
 
+    private void StartCollider()
+    {
+        for (int i = 0; i < box_2D.Length; i++)
+        {
+            box_2D[i].enabled = true;
+            box[i].enabled = true;
+        }
+    }
+
     private void BeBigger()
     {
         transform.localScale = Vector3.Lerp(transform.localScale, bigScale, changeSpeed * Time.deltaTime);
@@ -98,7 +97,7 @@ public class ChangeObject : MonoBehaviour
 
     private void BeSmaller()
     {
-        transform.localScale = Vector3.Lerp(transform.localScale, targetPosition.position, changeSpeed * Time.deltaTime);
+        transform.localScale = Vector3.Lerp(transform.localScale, targetPosition.position, smallSpeed * Time.deltaTime);
         if (Vector3.Magnitude(transform.localScale - smallScale) <= 0.1)
         {
             Debug.Log("Small");
