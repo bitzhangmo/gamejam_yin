@@ -8,7 +8,10 @@ public class PlayerMove : MonoBehaviour
 {
     [HideInInspector]
     private Transform p_transform;
+    [SerializeField]
+    private float offset;
     private Rigidbody2D p_rigidbody;
+    public SpriteRenderer sr;
     public int lightCount = 5;
     public float jumpHeight = 20f;
     public float moveSpeed = 5.0f;
@@ -17,6 +20,9 @@ public class PlayerMove : MonoBehaviour
     public bool isDead = false;
     public Vector3 velocity;
     public LOSRadialLight LRLight;
+    public Animator anim;
+    public Sprite moveR;
+    public Sprite moveL;
 
     void Awake()
     {
@@ -41,6 +47,7 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
+        //float randomUp = Random.Range(-offset, offset);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             //transform.Translate(Vector3.up*30.0f*Time.deltaTime);
@@ -50,7 +57,12 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            p_transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            p_transform.Translate(Vector3.left * moveSpeed * Time.deltaTime /*+ new Vector3(0, randomUp, 0)*/);
+            if (sr.sprite != moveL)
+            {
+               // anim.SetFloat("turn", -1);
+                sr.sprite = moveL;
+            }
             //rigidbody.AddForce(new Vector3(-moveSpeed,0,0));
             Debug.Log("A");
         }
@@ -62,9 +74,19 @@ public class PlayerMove : MonoBehaviour
 		}*/
         else if (Input.GetKey(KeyCode.D))
         {
-            p_transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            p_transform.Translate(Vector3.right * moveSpeed * Time.deltaTime /*+ new Vector3(0, randomUp, 0)*/);
+            if (sr.sprite != moveR)
+            {
+                //anim.SetFloat("turn", -1);
+                sr.sprite = moveR;
+            }
+
             //rigidbody.AddForce(new Vector3(moveSpeed,0,0));
             Debug.Log("D");
+        }
+        else
+        {
+            anim.SetFloat("turn", 0);
         }
     }
 
