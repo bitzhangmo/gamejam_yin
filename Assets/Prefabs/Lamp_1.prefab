@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114733741580485312}
   - component: {fileID: 199285404838349470}
   - component: {fileID: 33740140934469094}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114851346215015446}
   - component: {fileID: 199809468517051390}
   - component: {fileID: 33053861589303474}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 212701910345252666}
   - component: {fileID: 114955579112148788}
   - component: {fileID: 61978344268856992}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Lamp_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4289393891170244}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

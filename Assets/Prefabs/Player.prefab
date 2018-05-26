@@ -30,7 +30,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1345728315086556
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,9 +76,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4763059636111278}
-  - component: {fileID: 23174245800524178}
-  - component: {fileID: 33278676482241602}
   - component: {fileID: 114682116794145398}
+  - component: {fileID: 23391868949978746}
+  - component: {fileID: 33625407440012178}
+  - component: {fileID: 114362864220566692}
   m_Layer: 0
   m_Name: PlayerLight
   m_TagString: Untagged
@@ -141,7 +142,7 @@ Transform:
   m_Father: {fileID: 4405804751795382}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23174245800524178
+--- !u!23 &23391868949978746
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -182,7 +183,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1217257728258866}
   m_Mesh: {fileID: 0}
---- !u!33 &33278676482241602
+--- !u!33 &33625407440012178
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -309,6 +310,32 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+--- !u!114 &114362864220566692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643751562735780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d744d5574916149e0854dfab5c4f781d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 0
+  coneAngle: 0
+  faceAngle: 0
+  degreeStep: 0.2
+  invertMode: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  color: {r: 0.6691177, g: 0.6691177, b: 0.6691177, a: 0.559}
+  material: {fileID: 2100000, guid: 2e91f08796cbd44849f1e15382cade3d, type: 2}
+  orderInLayer: 0
+  sortingLayer: 0
+  radius: 13.48
+  flashFrequency: 5
+  flashOffset: 1
 --- !u!114 &114469441054202442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,7 +433,7 @@ MonoBehaviour:
   isShooting: 0
   isDead: 0
   velocity: {x: 0, y: 0, z: 0}
-  LRLight: {fileID: 0}
+  LRLight: {fileID: 114682116794145398}
   anim: {fileID: 95003400188057268}
   moveR: {fileID: 21300000, guid: 6fd62ef78f05851459a474e843a9f846, type: 3}
   moveL: {fileID: 21300000, guid: 97d2a624046e21947a6641a3f52803bc, type: 3}
@@ -3778,7 +3805,7 @@ ParticleSystemRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1217257728258866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3859,7 +3886,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 97d2a624046e21947a6641a3f52803bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5fd6514e39fb541438c91313e84efca4, type: 3}
   m_Color: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
