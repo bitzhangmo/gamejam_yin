@@ -140,7 +140,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
-  color: {r: 0.9336341, g: 0.9338235, b: 0.92009085, a: 0.991}
+  color: {r: 0.99215686, g: 0.37254903, b: 0.09411765, a: 0.4392157}
   material: {fileID: 2100000, guid: 2e91f08796cbd44849f1e15382cade3d, type: 2}
   orderInLayer: 0
   sortingLayer: 0
@@ -158,4 +158,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e126ada8d8ea5547bdfef61fceb2d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceTime: 100
