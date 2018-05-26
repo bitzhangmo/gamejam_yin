@@ -9,30 +9,6 @@ public class FlyDestory : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject.tag == "Ground")
-        //{
-        //    bounceTime--;
-        //    if (bounceTime <= 0)
-        //    {
-        //        GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
-        //        Debug.Log("2");
-        //        Destroy(gameObject);
-        //    }
-        //}
-        //else if (collision.gameObject.tag == "Destroy" )
-        //{
-        //    if (gameObject.tag != "PreLight")
-        //    {
-        //        GameObject.FindWithTag("GameManager").GetComponent<GameManager>().SendMessage("SubLightFly");
-        //        Debug.Log("3");
-        //        Debug.Log("Destroy!");
-        //        Destroy(gameObject);
-        //    }
-        //    else
-        //    {
-        //        Destroy(gameObject);
-        //    }
-        //}
         if (collision.gameObject.tag != "Reflect")
         {
             if (gameObject.tag != "PreLight")
