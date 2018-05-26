@@ -53,7 +53,7 @@ public class PlayerLight : MonoBehaviour
                 Destroy(pre);
             }
             clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			targetDirection=new Vector3(clickPosition.x-player.transform.position.x,clickPosition.y-player.transform.position.y,player.transform.position.z);
+            targetDirection = clickPosition - transform.position;
             lastMousePosition = Vector3.zero;
             Debug.Log("Shoot");
             StartCoroutine(CreateLightWay());
@@ -66,7 +66,7 @@ public class PlayerLight : MonoBehaviour
             if (Vector3.Magnitude(mousePosition - lastMousePosition) <= checkOffset)
             {
                 checkTime += Time.deltaTime;
-                Debug.Log(checkTime);
+                //Debug.Log(checkTime);
                 if (checkTime >= 0.5f && LightNum > 0)
                 {
                     if (pre == null)
