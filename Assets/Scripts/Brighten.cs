@@ -6,13 +6,17 @@ using UnityEngine;
 public class Brighten : MonoBehaviour {
 
 	private SpriteRenderer render;
+    private AudioSource audio;
 	public MoveInDirection toMove;
     public GameObject fire;
     public GameObject[] nextLevel;
     public GameObject[] smallObject;
+    public GameObject nextLamp;
 
-	private void Awake()
+
+    private void Awake()
     {
+        audio = GetComponent<AudioSource>();
 		render=GetComponent<SpriteRenderer>();
 	}
 
@@ -20,6 +24,7 @@ public class Brighten : MonoBehaviour {
     {
 		if(other.gameObject.tag=="Player"||other.gameObject.tag=="Light")
 		{
+            audio.Play();
             if (other.gameObject.tag == " Light")
             {
                 Destroy(other.gameObject);
@@ -33,7 +38,12 @@ public class Brighten : MonoBehaviour {
                 for (int i = 0; i < nextLevel.Length; i++)
                 {
                     nextLevel[i].GetComponent<ChangeObject>().isStart = true;
+                   
                 }
+            }
+            if (nextLamp != null)
+            {
+                nextLamp.SetActive(true);
             }
             if (smallObject != null)
             {

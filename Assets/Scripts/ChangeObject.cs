@@ -15,6 +15,7 @@ public class ChangeObject : MonoBehaviour
     [SerializeField]
     private float smallSpeed;
     private Vector3 originalPosition;
+    private AudioSource audio;
     private static Vector3 bigScale = new Vector3(1, 1, 1);
     private static Vector3 smallScale = new Vector3(0.1f, 0.1f, 0.1f);
     public BoxCollider2D[] box_2D;
@@ -28,7 +29,8 @@ public class ChangeObject : MonoBehaviour
 
     private void Start()
     {
-        originalPosition = transform.position; 
+        originalPosition = transform.position;
+        audio = GetComponent<AudioSource>();
     }
 
     private IEnumerator ShakeObject()
@@ -47,6 +49,7 @@ public class ChangeObject : MonoBehaviour
     {
         if (isStart)
         {
+            audio.Play();
             StartCollider();
             StartCoroutine(ObjectMove());
         }
