@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4915254863470218}
   - component: {fileID: 61161337531220514}
+  - component: {fileID: 114038968811362922}
+  - component: {fileID: 114379523600936554}
   m_Layer: 11
   m_Name: cloth
   m_TagString: Ground
@@ -94,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1202717179303468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.22, z: 0}
+  m_LocalPosition: {x: 3.75, y: -35.8, z: 0.33187023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113120593768990}
@@ -155,7 +157,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.036230087, y: -0.94356036}
+  m_Offset: {x: 0.008603573, y: -0.08329916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -166,7 +168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.237221, y: 3.5071206}
+  m_Size: {x: 4.0894976, y: 4.7098475}
   m_EdgeRadius: 0
 --- !u!65 &65771133433054366
 BoxCollider:
@@ -178,8 +180,49 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0461174, y: 2.322174, z: 1}
-  m_Center: {x: 0.008908617, y: -0.66108704, z: 0}
+  m_Size: {x: 0.8453229, y: 4.6996093, z: 1}
+  m_Center: {x: 0.024521485, y: -0.29283562, z: 0}
+--- !u!114 &114038968811362922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202717179303468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17f5197e43f83d478e017ea13ba0a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isToMove: 0
+  length: 3
+  moveSpeed: 3
+  direction: 1
+--- !u!114 &114379523600936554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202717179303468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5a93e59eb8e534e946dc9df9739bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.2
+  shakeTimes: 10
+  changeSpeed: 1
+  speed: 2
+  smallSpeed: 0.1
+  box_2D:
+  - {fileID: 61161337531220514}
+  box:
+  - {fileID: 65771133433054366}
+  targetPosition: {fileID: 0}
+  isBigger: 1
+  isSmaller: 0
+  isFalling: 1
+  isShaking: 1
+  isStart: 0
 --- !u!212 &212268130677301754
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -215,7 +258,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7e30613a4e8b56b4c93ebe8b07bddb1d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

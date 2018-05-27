@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using LOS;
 
 public class PlayerMove : MonoBehaviour
@@ -12,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     private float offset;
     [SerializeField]
     private float disapearSpeed;
+    [SerializeField]
+    private int levelNum;
     private Rigidbody2D p_rigidbody;
     public SpriteRenderer sr;
     public int lightCount = 5;
@@ -46,6 +49,10 @@ public class PlayerMove : MonoBehaviour
             LRLight.SetActive(false);
             anim.enabled = false;
             PlayerDead();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(levelNum);
+            }
         }
     }
 
@@ -96,11 +103,16 @@ public class PlayerMove : MonoBehaviour
         {
             isGrounded = true;
         }
+        if (other.gameObject.tag == "Death")
+        {
+            isDead = true;
+        }
     }
 
     private void PlayerDead()
     {
         sr.color = Color.Lerp(sr.color, Color.clear, Time.deltaTime * disapearSpeed);
+
     }
 
 }

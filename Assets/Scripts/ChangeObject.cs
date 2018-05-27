@@ -109,6 +109,7 @@ public class ChangeObject : MonoBehaviour
     private void FallingDown()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition.position, Time.deltaTime * speed);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         if (Vector3.Magnitude(transform.position - targetPosition.position) < 0.1f )
         {
             transform.position = targetPosition.position;
