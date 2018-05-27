@@ -14,6 +14,14 @@ public class GetPerformDown : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(isGoDown)
+		{
 			rb2d.constraints=new RigidbodyConstraints2D();
+		}
+			
+	}
+
+	public void isGoDownSetter()
+	{
+		isGoDown=true;
 	}
 }

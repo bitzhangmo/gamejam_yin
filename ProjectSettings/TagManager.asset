@@ -12,6 +12,7 @@ TagManager:
   - PreLight
   - Reflect
   - Death
+  - Start
   layers:
   - Default
   - TransparentFX

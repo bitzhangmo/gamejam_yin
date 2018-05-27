@@ -29,7 +29,7 @@ public class CurtainMove : MonoBehaviour
         {
             curtain_1.position = target_1.position;
             curtain_2.position = target_2.position;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 

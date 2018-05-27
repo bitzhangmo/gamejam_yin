@@ -12,6 +12,7 @@ public class Brighten : MonoBehaviour {
     public GameObject[] nextLevel;
     public GameObject[] smallObject;
     public GameObject nextLamp;
+    public GameObject destroyIt;
 
 
     private void Awake()
@@ -44,6 +45,10 @@ public class Brighten : MonoBehaviour {
             if (nextLamp != null)
             {
                 nextLamp.SetActive(true);
+            }
+            if (destroyIt != null)
+            {
+                Destroy(destroyIt);
             }
             if (smallObject != null)
             {

@@ -76,6 +76,7 @@ public class ChangeObject : MonoBehaviour
         {
             FallingDown();
         }
+        this.enabled = false;
     }
 
     private void StartCollider()
