@@ -19,7 +19,7 @@ public class ThroughMouse : MonoBehaviour {
 		Event e=Event.current;
 		
 		mousePositionInWorld=Camera.main.ScreenToWorldPoint(e.mousePosition);
-		Debug.Log(mousePositionInWorld);
+		//Debug.Log(mousePositionInWorld);
 	}
 	
 	// Update is called once per frame

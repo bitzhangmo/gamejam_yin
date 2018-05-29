@@ -11,6 +11,8 @@ TagManager:
   - GameManager
   - PreLight
   - Reflect
+  - Death
+  - Start
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - Reflect
   - Floor
   - PreLight
-  - 
-  - 
+  - BG
+  - BG_2
   - 
   - 
   - 

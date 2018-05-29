@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1466306184448160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.116, y: 1.076, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
-  color: {r: 0.9336341, g: 0.9338235, b: 0.92009085, a: 0.991}
+  color: {r: 0.99215686, g: 0.37254903, b: 0.09411765, a: 0.4392157}
   material: {fileID: 2100000, guid: 2e91f08796cbd44849f1e15382cade3d, type: 2}
   orderInLayer: 0
   sortingLayer: 0
@@ -158,4 +158,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e126ada8d8ea5547bdfef61fceb2d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceTime: 100
