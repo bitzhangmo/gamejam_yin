@@ -20,6 +20,6 @@ A confused problem which is Chinese word "烎"。
 - 人物接触到光球可以吸收光球，光球是属于人物的资源，当人物储存的光球数为0时游戏结束。
 
 ### 成员：
-策划：[https://github.com/akatheater](@奶酪包) [https://github.com/ThouSun](@ThouSun)
-程序：[https://github.com/TenWoods](@十木) [https://github.com/bitzhangmo](@张秣)
+策划：[@奶酪包](https://github.com/akatheater) [@ThouSun](https://github.com/ThouSun)
+程序：[@十木](https://github.com/TenWoods) [@张秣](https://github.com/bitzhangmo)
 美术：@原石正努力成为E爸中º @雪莲鸟
