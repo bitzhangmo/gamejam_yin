@@ -1,4 +1,3 @@
-﻿// Copyright (C) 2018 武汉艺画开天文化传播有限公司 版权所有
 // 创建标识: zhangMo
 using System.Collections;
 using System.Collections.Generic;
